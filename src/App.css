@@ -1,38 +1,188 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&display=swap');
+
+body{
+  margin : 0;
+  background-image: url("../public/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color : white;
+}
+
+*:focus {
+  outline: none;
+}
+
+::placeholder{
+  color : #C6D2CF;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  padding: 0 2vw;
+}
+
+nav > ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 3vh 0;
+  width : 15vw;
+  justify-content: space-between;
+}
+
+#app-logo > img{
+  border-radius: 12px;
+  width : 3vw;
+  height: 6vh;
+}
+
+#app-name{
+  margin-left: 1vw;
+  margin-top: 0.25vh;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+#search-box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15vh;
+  justify-content: center; 
+}
+
+#search-box > *{
+  padding: 0.5vh 1vw;
+}
+
+#search-box > input{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius : 15px;
+  border: 2px solid white;
+  border-right: none;
+  font-size: 1.2rem;
+  width : 25vw;
+  font-family: 'Noto Serif', serif;
+  color : #2C394B;
+}
+
+#s-btn{
+  cursor: pointer;
+  border: 2px solid white;
+  border-left: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(16,126,174);
+  background: linear-gradient(119deg, rgba(16,126,174,1) 0%, rgba(160,12,149,1) 52%, rgba(90,2,143,1) 100%);
+}
+
+#s-btn:hover{
+  transition: 500ms;
+  background: rgb(23,185,255);
+  background: linear-gradient(119deg, rgba(23,185,255,1) 0%, rgba(228,27,213,1) 52%, rgba(137,17,209,1) 100%);
+}
+
+#s-btn > img {
+  width : 35px;
+  height: 35px;
+}
+
+#content{
+  margin-top: 10vh;
+}
+
+.footer{
+  display: block;
+  text-align: center;
+  padding : 3vh 5vw;
+}
+
+.img-area{
+  border-radius: 10px;
+  margin: 15vh 4vw;
+  padding: 10vh 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1vw;
+  place-items: center;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.img-res{
+  width : 25vw;
+  height : 30vh;
+}
+
+.btn-area{
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+#jump-page{
+  background-color : rgba(255,255,255,0);
+  border: none;
+  border-bottom : 2px solid #f2d7d9; 
+  margin-left: 1vw;
+  width : 6vw;
+  color : #F2D7D9;
+  font-size: 1.05rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#go-btn{
+  margin-left: 0.2vw;
+  font-size : 1.04rem;
+  background-color: #6CC4A1;
+  border: 3px solid #F6E3C5;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#go-btn:hover{
+  transition: 500ms;
+  background-color: #F6E3C5;
+  border-color : #6CC4A1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* For ImageBody Component */
+.img-container{
+  border: 2px solid #F2D7D9;
+  padding: 2vh 1vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height : 55vh;
+  border-radius: 15px;
+  background-color: rgb(178, 200, 223,0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.img-des h3{
+  min-height: 4vh;
+  font-family: 'Noto Serif', serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-des > p{
+  min-height: 8vh;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.btn-container{
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-btn > a > img{
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 2px 7px;
+  width : 35px;
+  height: 35px;
+  background-color: rgba(97, 0, 148,0.2);
+}
+
+.card-btn > a > img:hover{
+  transition: 600ms;
+  background-color: rgba(252, 227, 138, 0.5);
 }
